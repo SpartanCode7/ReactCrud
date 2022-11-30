@@ -3,18 +3,18 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 export default function Update() {
-    const navigate = useNavigate();    
-    const [name, setName] = useState('');
-    const [slug, setSlug] = useState('');
-    const [description, setDescription] = useState('');
+    const navigate = useNavigate()
+    const [name, setName] = useState('')
+    const [slug, setSlug] = useState('')
+    const [description, setDescription] = useState('')
 
     const [id, setID] = useState(null);
     useEffect(() => {
             setID(localStorage.getItem('ID'))
-            setName(localStorage.getItem('Name'));
-            setSlug(localStorage.getItem('Slug'));
+            setName(localStorage.getItem('Name'))
+            setSlug(localStorage.getItem('Slug'))
             setDescription(localStorage.getItem('Description'))
-    }, []);
+    }, [])
 
     const updateAPIData = () => {
         axios.put(`https://6383958b6e6c83b7a9974a62.mockapi.io/data/categories/${id}`, {
@@ -22,7 +22,7 @@ export default function Update() {
             slug,
             description
         }).then(() => {
-            navigate.navigate('/read');
+            navigate('/read')
         })
     }
 

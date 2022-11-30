@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Getdata() {
 
@@ -49,7 +50,11 @@ function Getdata() {
                             <td>{item.name}</td>
                             <td><img src={item.slug} alt={item.name} /></td>
                             <td>{item.description}</td>
-                            <td><button onClick={() => setData(item)}>Update</button></td>
+                            <td>
+                                <Link to='/update'>
+                                    <button onClick={() => setData(item)}>Update</button>
+                                </Link>
+                            </td>
                             <td><button onClick={() => onDelete(item.id)}>Delete</button></td>
                         </tr>
                     )

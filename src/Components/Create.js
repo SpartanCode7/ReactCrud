@@ -20,13 +20,6 @@ function Create() {
         });
     }
 
-    
-    
-//     axios.create({
-//         baseURL: "http://localhost:8080/api",
-        
-//   });
-
   return (
     <div>
         <input type="text" name="name" onChange={(e) => setName(e.target.value)} />

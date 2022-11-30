@@ -42,5 +42,13 @@
   "main": "index.js",
   "devDependencies": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpartanCode7/Reactsimplecrud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SpartanCode7/Reactsimplecrud/issues"
+  },
+  "homepage": "https://github.com/SpartanCode7/Reactsimplecrud#readme"
 }
